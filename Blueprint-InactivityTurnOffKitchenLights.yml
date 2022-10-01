@@ -9,10 +9,6 @@ blueprint:
       selector:
         entity:
           domain: light
-    sensor:
-      name: Sensor
-      description: Motion Sensor to Check
-        entity: binary_sensor.ping_tuya_motion_sensor_kitchen
     time:
       name: Duration
       description: The duration to leave the light on for
@@ -21,7 +17,7 @@ blueprint:
 
 trigger:
   - platform: state
-    entity_id: !input sensor
+    entity_id: binary_sensor.ping_tuya_motion_sensor_kitchen
     to: 'off'
     for: !input time
 condition: []
