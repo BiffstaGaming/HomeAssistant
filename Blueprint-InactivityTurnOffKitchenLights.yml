@@ -17,7 +17,7 @@ blueprint:
 
 trigger:
   - platform: state
-    entity_id: 
+    entity_id: binary_sensor.ping_tuya_motion_sensor_kitchen
     to: 'off'
     for: !input time
 condition: []
